@@ -1,0 +1,9 @@
+{
+	"name": "brewtest-adf",
+	"location": "brazilsouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "934213de-c019-42cf-bcbd-553ec406d4e4",
+		"tenantId": "b115f4ec-f1d4-4877-bcdb-7642e6685419"
+	}
+}
