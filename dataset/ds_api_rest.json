@@ -1,5 +1,5 @@
 {
-	"name": "api_rest_connect",
+	"name": "ds_api_rest",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "rest_api_http",

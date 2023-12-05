@@ -1,0 +1,18 @@
+{
+	"name": "ds_api_blob",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_raw_blob",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "brewery"
+			}
+		},
+		"schema": {}
+	}
+}

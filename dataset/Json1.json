@@ -1,0 +1,20 @@
+{
+	"name": "Json1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_raw_blob",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "raw.json",
+				"folderPath": "bronze",
+				"container": "brewery"
+			}
+		},
+		"schema": {}
+	}
+}
