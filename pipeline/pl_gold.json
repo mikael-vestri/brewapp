@@ -1,0 +1,28 @@
+{
+	"name": "pl_gold",
+	"properties": {
+		"activities": [
+			{
+				"name": "NB_Gold_Layer",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/brew_test/gold/NB_Gold_Layer"
+				},
+				"linkedServiceName": {
+					"referenceName": "ls_db_silver_layer",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"annotations": []
+	}
+}
