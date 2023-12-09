@@ -84,6 +84,9 @@ store_count: integer
   - Chama o segundo notebook Databricks para agregações.
 - **Pipeline - Wrapper (pl_Wrapper):**
   - É o pipeline que implementa todos os outros pipelines. Ele chama na ordem o pl_bronze, pl_silver e pl_gold
+  Esquema da integração dos pipelines mencionados:
+
+![arquitetura do projeto](data_architecture.JPG)
 
 ## Testes Realizados
 - **Contagem de Linhas por Camada:**
