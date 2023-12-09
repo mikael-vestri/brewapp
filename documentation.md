@@ -19,7 +19,7 @@ O projeto visa a ingestão de dados sobre cervejarias nos EUA em um data lake, u
 ### Visão Geral
 O projeto segue a tradicional "Arquitetura Medalhão" com os dados percorrendo as três camadas (bronze, silver e gold) sofrendo as transformações necessárias. A imagem abaixo ilustra essa arquitetura bem como todas as ferramentas utilizadas neste projeto. 
 
-![arquitetura do projeto]()
+![arquitetura do projeto](data_architecture.JPG)
 
 ### Bronze Layer
 - **Descrição Geral:** Os dados são extraídos da API e persistidos no Azure Blob Storage em seu estado raw.
