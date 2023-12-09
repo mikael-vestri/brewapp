@@ -16,10 +16,14 @@
 O projeto visa a ingestão de dados sobre cervejarias nos EUA em um data lake, utilizando uma API como fonte de dados. A orquestração dos dados ocorre por meio das camadas bronze, silver e gold, com Azure Data Factory para ingestão e Databricks para transformações.
 
 ## Arquitetura do Projeto
+### Tecnologias
+Para executar as etapas do projeto foram utilizadas as seguintes ferramentas/tecnologias.
+![arquitetura do projeto](data_architecture.JPG)
+
 ### Visão Geral
 O projeto segue a tradicional "Arquitetura Medalhão" com os dados percorrendo as três camadas (bronze, silver e gold) sofrendo as transformações necessárias. A imagem abaixo ilustra essa arquitetura bem como todas as ferramentas utilizadas neste projeto. 
 
-![arquitetura do projeto](data_architecture.JPG)
+![arquitetura do projeto](arquitetura.JPG)
 
 ### Bronze Layer
 - **Descrição Geral:** Os dados são extraídos da API e persistidos no Azure Blob Storage em seu estado raw.
