@@ -136,7 +136,7 @@ Certifique-se de ter os seguintes requisitos instalados em seu ambiente:
    container_name = nome que você deu para o seu container dentro da instância do storage account criada
    storage_account_access_key = verifique a chave no canto esquerdo da tela do storage account, em "access keys"
 
-- **Execução do Projeto:**
+## Execução do Projeto:
 ### Ingestão de Dados com Azure Data Factory
 
   O pipeline pl_Wrapper é o que deve ser executado para rodar todos os outros pipelines na ordem correta para que sejam executadas todas as etapas do projeto. Ao rodá-lo ele completará as seguitnes etapas:  
