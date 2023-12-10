@@ -18,7 +18,7 @@ O projeto visa a ingestão de dados sobre cervejarias nos EUA em um data lake, u
 ## Arquitetura do Projeto
 ### Tecnologias
 Para executar as etapas do projeto foram utilizadas as seguintes ferramentas/tecnologias.
-![arquitetura do projeto](images/data_architecture.JPG)
+![arquitetura do projeto](images/technologies.JPG)
 
 ### Visão Geral
 O projeto segue a tradicional "Arquitetura Medalhão" com os dados percorrendo as três camadas (bronze, silver e gold) sofrendo as transformações necessárias. A imagem abaixo ilustra essa arquitetura bem como todas as ferramentas utilizadas neste projeto. 
