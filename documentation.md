@@ -144,10 +144,6 @@ Certifique-se de ter os seguintes requisitos instalados em seu ambiente:
 2. Executa o pipeline `pl_silver` para processar os dados e gravá-los na camada Silver.
 3. Executa o pipeline `pl_gold` para criar a camada Gold com dados agregados.
 
-### Execução no Databricks
-
-1. Abra o notebook Databricks `notebook_silver` e execute as células para processamento adicional.
-2. Abra o notebook Databricks `notebook_gold` e execute as células para agregação de dados.
 ## Conclusão
 - **Recapitulação do Projeto:**
   - A ingestão de dados foi bem sucedida
