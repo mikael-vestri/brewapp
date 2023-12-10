@@ -98,10 +98,28 @@ store_count: integer
 
 ## Instruções de Execução
 - **Configuração do Ambiente:**
-  - [Inserir informações sobre a configuração do ambiente, se necessário.]
+  - Requisitos para executar o projeto:
+    - [Azure Data Factory](https://azure.microsoft.com/services/data-factory/)
+    - [Databricks](https://databricks.com/)
+    - [Apache Spark](https://spark.apache.org/)
+  ** Configuração das variáveis de ambiente
+-Certifique-se de configurar as seguintes variáveis de ambiente:
+
+    - `AZURE_SUBSCRIPTION_ID`: ID da assinatura do Azure.
+    - `DATABRICKS_WORKSPACE_URL`: URL do seu workspace do Databricks.
+    
 - **Execução do Projeto:**
   O pipeline pl_Wrapper é o que deve ser executado para rodar todos os outros pipelines na ordem correta para que sejam executadas todas as etapas do projeto.
+### Ingestão de Dados com Azure Data Factory
 
+1. Execute o pipeline `pl_bronze` para realizar a ingestão dos dados brutos.
+2. Execute o pipeline `pl_silver` para processar os dados e gravá-los na camada Silver.
+3. Execute o pipeline `pl_gold` para criar a camada Gold com dados agregados.
+
+### Execução no Databricks
+
+1. Abra o notebook Databricks `notebook_silver` e execute as células para processamento adicional.
+2. Abra o notebook Databricks `notebook_gold` e execute as células para agregação de dados.
 ## Conclusão
 - **Recapitulação do Projeto:**
   - A ingestão de dados foi bem sucedida
