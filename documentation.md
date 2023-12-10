@@ -97,33 +97,45 @@ store_count: integer
   - Diante dessa análise feita, verificou-se que os dados estão consistentes
 
 ## Instruções de Execução
-- **Configuração do Ambiente:**
-  - Requisitos para executar o projeto:
-    - [Azure Data Factory](https://azure.microsoft.com/services/data-factory/)
-    - [Databricks](https://databricks.com/)
-    - [Apache Spark](https://spark.apache.org/)
-  ** Configuração das variáveis de ambiente
--Certifique-se de configurar as seguintes variáveis de ambiente:
+## Obtendo o Código-Fonte
 
-    - `AZURE_SUBSCRIPTION_ID`: ID da assinatura do Azure.
-    - `DATABRICKS_WORKSPACE_URL`: URL do seu workspace do Databricks.
-## Instruções Detalhadas para Configuração de Variáveis de Ambiente:
+O código-fonte deste projeto está disponível publicamente no GitHub. Siga as etapas abaixo para obter o código:
 
-**Azure Subscription ID:**
+1. Acesse o repositório do GitHub: [https://github.com/mikael-vestri/brewapp](https://github.com/mikael-vestri/brewapp)
+2. Clone o repositório para o seu ambiente local:
 
-1. Acesse o [Portal do Azure](https://portal.azure.com/).
-2. Faça login na sua conta.
-3. Navegue até o Azure Data Factory.
-4. No menu à esquerda, procure por "Configurações" ou "Configurações do Serviço".
-5. Copie o ID da Assinatura.
+```bash
+git clone https://github.com/mikael-vestri/brewapp.git
+```
 
-**Databricks Workspace URL:**
+## Configurando e Executando os Serviços
 
-1. Acesse o [Portal do Databricks](https://<sua-região>.azuredatabricks.net/).
-2. Faça login na sua conta.
-3. No canto superior direito, clique em seu avatar e vá para "User Settings" (Configurações do Usuário).
-4. Copie a URL do workspace do Databricks.
-    
+Certifique-se de ter os seguintes requisitos instalados em seu ambiente:
+
+- [Azure Data Factory](https://azure.microsoft.com/services/data-factory/)
+- [Azure Storage Account](https://azure.microsoft.com/services/storage/)
+- [Databricks](https://databricks.com/)
+
+### Configurando o Azure Storage Account
+
+1. Crie uma conta de armazenamento no Azure.
+2. Selecione o tipo Blob Storage.
+3. Crie um container
+
+### Configurando o Azure Data Factory
+
+1. Abra o código do Azure Data Factory no seu editor de escolha.
+2. Configure os pipelines conforme necessário para o seu ambiente.
+3. Execute o pipeline para realizar a ingestão, transformação e agregação dos dados.
+
+### Configurando Databricks Notebooks
+
+1. Abra os notebooks Databricks no seu ambiente.
+2. Faça a conexão do workspace com o Azure Datafactory colocando suas credenciais específicas no notebook setup/configuration.
+   storage_account_name = nome que você deu para o seu recurso do storage account
+   container_name = nome que você deu para o seu container dentro da instância do storage account criada
+   storage_account_access_key = verifique a chave no canto esquerdo da tela do storage account, em "access keys"
+
 - **Execução do Projeto:**
 ### Ingestão de Dados com Azure Data Factory
 
