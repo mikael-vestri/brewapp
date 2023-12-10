@@ -107,14 +107,30 @@ store_count: integer
 
     - `AZURE_SUBSCRIPTION_ID`: ID da assinatura do Azure.
     - `DATABRICKS_WORKSPACE_URL`: URL do seu workspace do Databricks.
+## Instruções Detalhadas para Configuração de Variáveis de Ambiente:
+
+**Azure Subscription ID:**
+
+1. Acesse o [Portal do Azure](https://portal.azure.com/).
+2. Faça login na sua conta.
+3. Navegue até o Azure Data Factory.
+4. No menu à esquerda, procure por "Configurações" ou "Configurações do Serviço".
+5. Copie o ID da Assinatura.
+
+**Databricks Workspace URL:**
+
+1. Acesse o [Portal do Databricks](https://<sua-região>.azuredatabricks.net/).
+2. Faça login na sua conta.
+3. No canto superior direito, clique em seu avatar e vá para "User Settings" (Configurações do Usuário).
+4. Copie a URL do workspace do Databricks.
     
 - **Execução do Projeto:**
-  O pipeline pl_Wrapper é o que deve ser executado para rodar todos os outros pipelines na ordem correta para que sejam executadas todas as etapas do projeto.
 ### Ingestão de Dados com Azure Data Factory
 
-1. Execute o pipeline `pl_bronze` para realizar a ingestão dos dados brutos.
-2. Execute o pipeline `pl_silver` para processar os dados e gravá-los na camada Silver.
-3. Execute o pipeline `pl_gold` para criar a camada Gold com dados agregados.
+  O pipeline pl_Wrapper é o que deve ser executado para rodar todos os outros pipelines na ordem correta para que sejam executadas todas as etapas do projeto. Ao rodá-lo ele completará as seguitnes etapas:  
+1. Executa o pipeline `pl_bronze` para realizar a ingestão dos dados brutos.
+2. Executa o pipeline `pl_silver` para processar os dados e gravá-los na camada Silver.
+3. Executa o pipeline `pl_gold` para criar a camada Gold com dados agregados.
 
 ### Execução no Databricks
 
