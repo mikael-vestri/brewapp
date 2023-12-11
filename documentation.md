@@ -129,23 +129,23 @@ Certifique-se de ter os seguintes requisitos instalados em seu ambiente:
 
 ### Configurando o Azure Data Factory
 
-1. No portal da Azure, configure um novo ambiente de Data Factory (você pode seguir o exemplo do arquivo brewtest-adf na pasta *factory*, utilize o seu próprio TenantID e PrincipalId. 
-2. Abra os códigos dos pipelines do Azure Data Factory na pasta *pipeline* no seu editor de sua escolha.
-3. Configure os pipelines conforme necessário para o seu ambiente.
-4. Na pasta *linkedServices* você encontra os códigos para configurações dos linked services para estabelecer conexão com os datasets, datalake, databricks etc...Exectue os códigos em um editore de sua escolha.
+1. No portal da Azure, configure um novo ambiente de Data Factory (você pode seguir o exemplo do arquivo brewtest-adf na pasta *factory*, utilize o seu próprio TenantID e PrincipalId.
+2. Abra os códigos dos pipelines (arquivos .json) do Azure Data Factory na pasta *pipeline* no seu editor de sua escolha.
+3. Abra os códigos dos datasets (arquivos .json) do Azure Data Factory na pasta *datasets* no seu editor de sua escolha.
+4. Na pasta *linkedServices* você encontra os códigos (arquivos .json) para configurações dos linked services para estabelecer conexão com os datasets, datalake, databricks etc...Exectue os códigos em um editore de sua escolha.
 
 ### Configurando Databricks Notebooks
 
 1. Na pasta *databricks*, baixe os notebooks disponíveis.
 2. Importe os notebooks Databricks no seu próprio workspace.
 3. Faça a conexão do workspace com o Azure Datafactory colocando suas credenciais específicas no notebook setup/configuration.
-   storage_account_name = nome que você deu para o seu recurso do storage account
-   container_name = nome que você deu para o seu container dentro da instância do storage account criada
-   storage_account_access_key = verifique a chave no canto esquerdo da tela do storage account, em "access keys"
+   - storage_account_name = nome que você deu para o seu recurso do storage account
+   - container_name = nome que você deu para o seu container dentro da instância do storage account criada
+   - storage_account_access_key = verifique a chave no canto esquerdo da tela do storage account, em "access keys"
 
 ## Execução do Projeto:
 
-  Uma vez configurados os pipelines, os linked services e os notebooks, o pipeline pl_Wrapper é o que deve ser executado para rodar todos os outros pipelines na ordem correta para que sejam executadas todas as etapas do projeto. Ao rodá-lo ele completará as seguitnes etapas:  
+  Uma vez configurados os datasets, pipelines, os linked services e os notebooks, o pipeline pl_Wrapper é o que deve ser executado para rodar todos os outros pipelines na ordem correta para que sejam executadas todas as etapas do projeto. Ao rodá-lo ele completará as seguitnes etapas:  
 1. Executa o pipeline `pl_bronze` para realizar a ingestão dos dados brutos.
 2. Executa o pipeline `pl_silver` para processar os dados e gravá-los na camada Silver.
 3. Executa o pipeline `pl_gold` para criar a camada Gold com dados agregados.
