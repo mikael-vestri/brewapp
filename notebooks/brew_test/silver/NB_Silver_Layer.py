@@ -24,7 +24,7 @@ raw_data = spark.read.json(bronze_path, schema=schema)
 
 # COMMAND ----------
 
-raw_data.schema
+raw_data.display()
 
 # COMMAND ----------
 
