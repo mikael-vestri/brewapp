@@ -23,7 +23,7 @@ Para executar as etapas do projeto foram utilizadas as seguintes ferramentas/tec
 ### Visão Geral
 O projeto segue a tradicional "Arquitetura Medalhão" com os dados percorrendo as três camadas (bronze, silver e gold) sofrendo as transformações necessárias. A imagem abaixo ilustra essa arquitetura bem como todas as ferramentas utilizadas neste projeto. 
 
-![arquitetura do projeto](images/arquitetura.JPG)
+![arquitetura do projeto](images/arquitetura2.JPG)
 
 ### Bronze Layer
 - **Descrição Geral:** Os dados são extraídos da API e persistidos no Azure Blob Storage em seu estado raw.
