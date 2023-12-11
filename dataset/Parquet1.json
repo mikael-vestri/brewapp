@@ -1,0 +1,33 @@
+{
+	"name": "Parquet1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_raw_blob",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "gold",
+				"container": "brewery"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "brewery_type",
+				"type": "UTF8"
+			},
+			{
+				"name": "state",
+				"type": "UTF8"
+			},
+			{
+				"name": "store_count",
+				"type": "INT32"
+			}
+		]
+	}
+}
