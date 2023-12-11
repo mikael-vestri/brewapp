@@ -125,8 +125,9 @@ Certifique-se de ter os seguintes requisitos instalados em seu ambiente:
 ### Configurando o Azure Data Factory
 
 1. No portal da Azure, configure um novo ambiente de Data Factory (você pode seguir o exemplo do arquivo brewtest-adf na pasta *factory*, utilize o seu próprio TenantID e PrincipalId. 
-2. Abra os códigos dos pipelines do Azure Data Factory na pasta *pipeline* no seu editor de escolha.
+2. Abra os códigos dos pipelines do Azure Data Factory na pasta *pipeline* no seu editor de sua escolha.
 3. Configure os pipelines conforme necessário para o seu ambiente.
+4. Na pasta *linkedServices* você encontra os códigos para configurações dos linked services para estabelecer conexão com os datasets, datalake, databricks etc...Exectue os códigos em um editore de sua escolha.
 
 ### Configurando Databricks Notebooks
 
@@ -138,15 +139,14 @@ Certifique-se de ter os seguintes requisitos instalados em seu ambiente:
    storage_account_access_key = verifique a chave no canto esquerdo da tela do storage account, em "access keys"
 
 ## Execução do Projeto:
-### Ingestão de Dados com Azure Data Factory
 
-  O pipeline pl_Wrapper é o que deve ser executado para rodar todos os outros pipelines na ordem correta para que sejam executadas todas as etapas do projeto. Ao rodá-lo ele completará as seguitnes etapas:  
+  Uma vez configurados os pipelines, os linked services e os notebooks, o pipeline pl_Wrapper é o que deve ser executado para rodar todos os outros pipelines na ordem correta para que sejam executadas todas as etapas do projeto. Ao rodá-lo ele completará as seguitnes etapas:  
 1. Executa o pipeline `pl_bronze` para realizar a ingestão dos dados brutos.
 2. Executa o pipeline `pl_silver` para processar os dados e gravá-los na camada Silver.
 3. Executa o pipeline `pl_gold` para criar a camada Gold com dados agregados.
+4. Executa a cópia dos dados para o SQL database (camada semântica).
+5. Você pode rodar o notebook *Data_Recon* para fazer validação dos dados e ver se eles estão consistentes entre as camadas.
 
 ## Conclusão
-- **Recapitulação do Projeto:**
-  - A ingestão de dados foi bem sucedida
 - **Melhorias Futuras:**
   - Poderão ser inseridas novas agregações para que mais tipos de análises possam ser feitas, conectando os dados obtidos com o Power BI para geração de dashboards. 
