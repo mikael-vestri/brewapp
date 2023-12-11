@@ -124,13 +124,15 @@ Certifique-se de ter os seguintes requisitos instalados em seu ambiente:
 
 ### Configurando o Azure Data Factory
 
-1. Abra o código do Azure Data Factory no seu editor de escolha.
-2. Configure os pipelines conforme necessário para o seu ambiente.
+1. No portal da Azure, configure um novo ambiente de Data Factory (você pode seguir o exemplo do arquivo brewtest-adf na pasta *factory*, utilize o seu próprio TenantID e PrincipalId. 
+2. Abra os códigos dos pipelines do Azure Data Factory na pasta *pipeline* no seu editor de escolha.
+3. Configure os pipelines conforme necessário para o seu ambiente.
 
 ### Configurando Databricks Notebooks
 
-1. Abra os notebooks Databricks no seu ambiente.
-2. Faça a conexão do workspace com o Azure Datafactory colocando suas credenciais específicas no notebook setup/configuration.
+1. Na pasta *databricks*, baixe os notebooks disponíveis.
+2. Importe os notebooks Databricks no seu próprio workspace.
+3. Faça a conexão do workspace com o Azure Datafactory colocando suas credenciais específicas no notebook setup/configuration.
    storage_account_name = nome que você deu para o seu recurso do storage account
    container_name = nome que você deu para o seu container dentro da instância do storage account criada
    storage_account_access_key = verifique a chave no canto esquerdo da tela do storage account, em "access keys"
