@@ -107,7 +107,12 @@ O código-fonte deste projeto está disponível publicamente no GitHub. Siga as 
 ```bash
 git clone https://github.com/mikael-vestri/brewapp.git
 ```
-
+3. Nesse repositório você encontrará os códigos para configurações dos seguintes artefatos:
+  - Linked Services  
+  - Datasets
+  - Pipelines
+  - Databricks Notebooks
+    
 ## Configurando e Executando os Serviços
 
 Certifique-se de ter os seguintes requisitos instalados em seu ambiente:
