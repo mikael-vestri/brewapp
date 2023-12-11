@@ -144,8 +144,7 @@ Certifique-se de ter os seguintes requisitos instalados em seu ambiente:
 1. Executa o pipeline `pl_bronze` para realizar a ingestão dos dados brutos.
 2. Executa o pipeline `pl_silver` para processar os dados e gravá-los na camada Silver.
 3. Executa o pipeline `pl_gold` para criar a camada Gold com dados agregados.
-4. Executa a cópia dos dados para o SQL database (camada semântica).
-5. Você pode rodar o notebook *Data_Recon* para fazer validação dos dados e ver se eles estão consistentes entre as camadas.
+4. Você pode rodar o notebook *Data_Recon* para fazer validação dos dados e ver se eles estão consistentes entre as camadas.
 
 ## Conclusão
 - **Melhorias Futuras:**
